@@ -30,9 +30,9 @@ export default function AboutPage() {
                 eco-friendly materials sets us apart from conventional construction companies.
               </p>
             </div>
-            <div className="relative h-[400px] rounded-2xl overflow-hidden">
+            <div className="relative h-[500px] rounded-2xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/logo.svg?height=500&width=500"
                 alt="Cocoflo team at work"
                 fill
                 className="object-cover"
@@ -50,7 +50,7 @@ export default function AboutPage() {
             <div className="bg-white p-8 rounded-2xl shadow-subtle">
               <p className="text-lg text-gray-600">
                 We are committed to delivering high-quality waterproofing services while promoting sustainability
-                through our coconut wood products. Our goal is to create spaces that are not only protected from
+                through our coconut plank products. Our goal is to create spaces that are not only protected from
                 environmental elements but also contribute positively to the environment.
               </p>
             </div>
@@ -98,7 +98,7 @@ export default function AboutPage() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      {/* <section className="py-16 md:py-24 bg-gray-50">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Meet Our Team</h2>
           <div className="grid md:grid-cols-3 gap-8">
@@ -138,7 +138,7 @@ export default function AboutPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <CTASection

@@ -8,16 +8,27 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="bg-primary text-white py-16 md:py-24">
-        <div className="container grid md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+      <section className=" bg-primary text-white py-16 md:py-24 relative h-screen">
+        <div className="absolute inset-0 w-full h-full overflow-hidden">
+          <video 
+            src="/banner.mp4" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-primary/60"></div>
+        </div>
+        <div className="container flex justify-center items-center h-full relative z-10">
+          <div className="space-y-6 text-center max-w-2xl mx-auto">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
               Protect Your Space. Build Sustainably.
             </h1>
             <p className="text-lg md:text-xl text-gray-300">
-              Your trusted partner in waterproofing and eco-friendly wood products.
+              Your trusted partner in waterproofing and eco-friendly coconut  planks.
             </p>
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild className="bg-accent text-primary hover:bg-accent/90 rounded-full px-6">
                 <Link href="/contact">Get Free Consultation</Link>
               </Button>
@@ -25,15 +36,6 @@ export default function Home() {
                 <Link href="/services">Explore Our Products</Link>
               </Button>
             </div>
-          </div>
-          <div className="relative h-[300px] md:h-[400px] lg:h-[500px] rounded-2xl overflow-hidden">
-            <Image
-              src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop"
-              alt="Waterproofing in progress"
-              fill
-              className="object-cover"
-              priority
-            />
           </div>
         </div>
       </section>
@@ -86,9 +88,9 @@ export default function Home() {
                 <div className="mb-6 h-16 w-16 bg-accent/20 rounded-full flex items-center justify-center">
                   <Leaf className="h-8 w-8 text-accent" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">Coconut Wooden Planks</h3>
+                <h3 className="text-2xl font-bold mb-4">Coconut Planks</h3>
                 <p className="text-gray-600 mb-6">
-                  Sustainable and beautiful coconut wood products for your interior design needs.
+                  Sustainable and beautiful coconut planks products for your interior design needs.
                 </p>
                 <ul className="space-y-3">
                   <li className="flex items-center gap-2">
@@ -112,7 +114,7 @@ export default function Home() {
               <div className="md:w-1/2 relative h-[300px] rounded-xl overflow-hidden order-2 md:order-1">
                 <Image
                   src="/wooden_plank.jpeg"
-                  alt="Coconut wooden planks"
+                  alt="Coconut planks"
                   fill
                   className="object-cover"
                 />
@@ -168,7 +170,7 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             <div className="relative h-64 rounded-2xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=300&width=300"
+                src="/coconut_plank.jpeg?height=300&width=300"
                 alt="Project 1"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
@@ -176,7 +178,7 @@ export default function Home() {
             </div>
             <div className="relative h-64 rounded-2xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=300&width=300"
+                src="/coconutplank1.jpeg?height=300&width=300"
                 alt="Project 2"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
@@ -184,7 +186,7 @@ export default function Home() {
             </div>
             <div className="relative h-64 rounded-2xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=300&width=300"
+                src="/coconutplank2.jpeg?height=300&width=300"
                 alt="Project 3"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
@@ -192,7 +194,7 @@ export default function Home() {
             </div>
             <div className="relative h-64 rounded-2xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=300&width=300"
+                src="/coconutplank3.jpeg?height=300&width=300"
                 alt="Project 4"
                 fill
                 className="object-cover hover:scale-105 transition-transform duration-300"
@@ -216,7 +218,7 @@ export default function Home() {
             <div className="bg-white/10 backdrop-blur-sm p-8 rounded-2xl">
               <h3 className="text-2xl font-bold mb-4">Eco-Friendly</h3>
               <p className="text-lg">
-                Coconut wood is renewable, termite-resistant, and eco-friendly, making it a sustainable choice for
+                Coconut plank is renewable, termite-resistant, and eco-friendly, making it a sustainable choice for
                 construction.
               </p>
             </div>
@@ -255,7 +257,7 @@ export default function Home() {
                 </div>
               </div>
               <p className="text-gray-700 italic">
-                "The coconut wood flooring transformed my space completely. It's beautiful, durable, and I love that
+                "The coconut plank flooring transformed my space completely. It's beautiful, durable, and I love that
                 it's eco-friendly!"
               </p>
             </div>

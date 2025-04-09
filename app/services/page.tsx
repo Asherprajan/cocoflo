@@ -23,7 +23,7 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] rounded-2xl overflow-hidden">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/water_proofing.jpg?height=500&width=600"
                 alt="Waterproofing services"
                 fill
                 className="object-cover"
@@ -67,9 +67,9 @@ export default function ServicesPage() {
         <div className="container">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 order-2 md:order-1">
-              <h2 className="text-3xl md:text-4xl font-bold">Coconut Wood Products</h2>
+              <h2 className="text-3xl md:text-4xl font-bold">Coconut Planks</h2>
               <p className="text-lg text-gray-600">
-                Our eco-friendly coconut wood products offer a sustainable alternative to traditional timber. Naturally
+                Our eco-friendly coconut planks offer a sustainable alternative to traditional timber. Naturally
                 beautiful and durable, these products add a unique aesthetic to any space while contributing to
                 environmental conservation.
               </p>
@@ -95,8 +95,8 @@ export default function ServicesPage() {
             </div>
             <div className="relative h-[400px] rounded-2xl overflow-hidden order-1 md:order-2">
               <Image
-                src="/placeholder.svg?height=500&width=600"
-                alt="Coconut wood products"
+                src="/wooden_plank.jpeg?height=500&width=600"
+                alt="Coconut planks"
                 fill
                 className="object-cover"
               />
@@ -165,7 +165,7 @@ export default function ServicesPage() {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white rounded-2xl overflow-hidden shadow-subtle">
               <div className="relative h-64">
-                <Image src="/placeholder.svg?height=300&width=400" alt="Project" fill className="object-cover" />
+                <Image src="/water_proofing.jpg?height=300&width=400" alt="Project" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Terrace Waterproofing</h3>
@@ -179,10 +179,10 @@ export default function ServicesPage() {
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-subtle">
               <div className="relative h-64">
-                <Image src="/placeholder.svg?height=300&width=400" alt="Project" fill className="object-cover" />
+                <Image src="/floor.jpeg?height=300&width=400" alt="Project" fill className="object-cover" />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-bold mb-2">Coconut Wood Flooring</h3>
+                <h3 className="text-xl font-bold mb-2">Coconut plank Flooring</h3>
                 <p className="text-gray-600 mb-4">Eco-friendly flooring installation for a modern apartment.</p>
                 <Link href="#" className="text-accent font-medium flex items-center gap-2 hover:underline">
                   View Details <ArrowRight className="h-4 w-4" />
@@ -191,11 +191,11 @@ export default function ServicesPage() {
             </div>
             <div className="bg-white rounded-2xl overflow-hidden shadow-subtle">
               <div className="relative h-64">
-                <Image src="/placeholder.svg?height=300&width=400" alt="Project" fill className="object-cover" />
+                <Image src="/coconutplank2.jpeg?height=300&width=400" alt="Project" fill className="object-cover" />
               </div>
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">Wall Paneling</h3>
-                <p className="text-gray-600 mb-4">Custom coconut wood wall paneling for a restaurant interior.</p>
+                  <p className="text-gray-600 mb-4">Custom coconut plank wall paneling for a restaurant interior.</p>
                 <Link href="#" className="text-accent font-medium flex items-center gap-2 hover:underline">
                   View Details <ArrowRight className="h-4 w-4" />
                 </Link>

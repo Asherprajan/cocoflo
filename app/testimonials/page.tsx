@@ -41,7 +41,7 @@ export default function TestimonialsPage() {
               <Quote className="absolute text-accent/20 h-16 w-16 -top-6 -left-6" />
               <div className="relative">
                 <p className="text-xl text-gray-700 italic mb-6">
-                  "The coconut wood flooring transformed my space completely. It's beautiful, durable, and I love that
+                  "The coconut plank flooring transformed my space completely. It's beautiful, durable, and I love that
                   it's eco-friendly! The team was professional and completed the work on schedule."
                 </p>
                 <div className="flex items-center gap-4">
@@ -81,7 +81,7 @@ export default function TestimonialsPage() {
             </div>
             <div className="bg-white p-6 rounded-2xl shadow-subtle">
               <p className="text-gray-700 italic mb-6">
-                "The coconut wood ceiling installation exceeded my expectations. The natural patterns and durability are
+                "The coconut plank ceiling installation exceeded my expectations. The natural patterns and durability are
                 impressive. Great service from start to finish."
               </p>
               <div className="flex items-center gap-3">
@@ -126,7 +126,7 @@ export default function TestimonialsPage() {
             </div>
             <div className="bg-white p-6 rounded-2xl shadow-subtle">
               <p className="text-gray-700 italic mb-6">
-                "The custom coconut wood furniture Cocoflo created for my office is both beautiful and functional. Their
+                "The custom coconut plank furniture Cocoflo created for my office is both beautiful and functional. Their
                 craftsmanship is exceptional, and I love supporting sustainable practices."
               </p>
               <div className="flex items-center gap-3">
@@ -188,7 +188,7 @@ export default function TestimonialsPage() {
               <div className="relative h-64 rounded-2xl overflow-hidden">
                 <Image
                   src="/placeholder.svg?height=300&width=500"
-                  alt="Before coconut wood installation"
+                  alt="Before coconut plank installation"
                   fill
                   className="object-cover"
                 />
@@ -197,13 +197,13 @@ export default function TestimonialsPage() {
               <div className="relative h-64 rounded-2xl overflow-hidden">
                 <Image
                   src="/placeholder.svg?height=300&width=500"
-                  alt="After coconut wood installation"
+                  alt="After coconut plank installation"
                   fill
                   className="object-cover"
                 />
                 <div className="absolute bottom-0 left-0 bg-accent text-primary px-4 py-2 rounded-tr-lg">After</div>
               </div>
-              <p className="text-center text-gray-600">Coconut Wood Flooring Installation</p>
+              <p className="text-center text-gray-600">Coconut plank Flooring Installation</p>
             </div>
           </div>
         </div>

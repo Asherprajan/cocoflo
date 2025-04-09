@@ -8,7 +8,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
             <h3 className="text-xl font-bold mb-4">Cocoflo</h3>
-            <p className="text-secondary mb-4">Your trusted partner in waterproofing and eco-friendly wood products.</p>
+            <p className="text-secondary mb-4">Your trusted partner in waterproofing and eco-friendly coconut planks.</p>
             <div className="flex items-center space-x-2 text-secondary">
               <MapPin size={16} />
               <span>Kozhikode, India</span>
@@ -56,7 +56,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link href="/services" className="text-secondary hover:text-accent transition-colors">
-                  Coconut Wood Flooring
+                  Coconut plank Flooring
                 </Link>
               </li>
               <li>
@@ -77,11 +77,14 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center space-x-2 text-secondary">
                 <Phone size={16} />
-                <span>+91 XXXXX XXXXX</span>
+                <div>
+                  <span>+91 9567 560 6156</span><br />
+                  <span>+91 9072 120 224</span>
+                </div>
               </li>
               <li className="flex items-center space-x-2 text-secondary">
                 <Mail size={16} />
-                <span>contact@cocoflo.in</span>
+                <span>info@cocoflo.in</span>
               </li>
               <li className="flex items-start space-x-2 text-secondary">
                 <Clock size={16} className="mt-1 flex-shrink-0" />

@@ -6,7 +6,6 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { MapPin, Phone, Mail, Clock } from "lucide-react"
 
 export default function ContactPage() {
@@ -14,31 +13,63 @@ export default function ContactPage() {
     name: "",
     email: "",
     phone: "",
-    inquiry: "",
     message: "",
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<{
+    success: boolean;
+    message: string;
+  } | null>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSelectChange = (value: string) => {
-    setFormData((prev) => ({ ...prev, inquiry: value }))
-  }
-
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission logic here
-    console.log(formData)
-    alert("Thank you for your message. We'll get back to you soon!")
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      inquiry: "",
-      message: "",
-    })
+    setIsSubmitting(true)
+    setSubmitStatus(null)
+    
+    // Create form data to submit (form-urlencoded format for Google Apps Script)
+    const formDataToSend = new FormData();
+    Object.entries(formData).forEach(([key, value]) => {
+      formDataToSend.append(key, value);
+    });
+    
+    // Google Apps Script URL
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwgrvldekGeTp_hDMpM8s2Lnj2WnT8DkYS3oLvW6p3PJmoi_4JjIUpp-KNTDn352KRm/exec";
+    
+    try {
+      // Use a no-CORS approach for Google Scripts (they don't support CORS properly)
+      const response = await fetch(scriptURL, {
+        method: "POST",
+        mode: "no-cors", // Using no-cors mode to bypass CORS issues
+        body: formDataToSend,
+      });
+      
+      // With no-cors mode, we can't check status, so we assume success if no error
+      setSubmitStatus({
+        success: true,
+        message: "Thank you for your message. We'll get back to you soon!"
+      });
+      
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      setSubmitStatus({
+        success: false,
+        message: "Network error. Please check your connection and try again."
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   }
 
   return (
@@ -59,6 +90,11 @@ export default function ContactPage() {
           <div className="grid lg:grid-cols-2 gap-12">
             <div className="bg-white p-8 rounded-2xl shadow-subtle">
               <h2 className="text-2xl md:text-3xl font-bold mb-6">Send Us a Message</h2>
+              {submitStatus && (
+                <div className={`p-4 mb-6 rounded-lg ${submitStatus.success ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800'}`}>
+                  {submitStatus.message}
+                </div>
+              )}
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium mb-2">
@@ -101,21 +137,6 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="inquiry" className="block text-sm font-medium mb-2">
-                    Type of Inquiry
-                  </label>
-                  <Select onValueChange={handleSelectChange} value={formData.inquiry}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select inquiry type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="waterproofing">Waterproofing</SelectItem>
-                      <SelectItem value="coconut-products">Coconut Products</SelectItem>
-                      <SelectItem value="general">General</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-                <div>
                   <label htmlFor="message" className="block text-sm font-medium mb-2">
                     Message
                   </label>
@@ -129,8 +150,12 @@ export default function ContactPage() {
                     required
                   />
                 </div>
-                <Button type="submit" className="w-full bg-accent text-primary hover:bg-accent/90">
-                  Send Message
+                <Button 
+                  type="submit" 
+                  className="w-full bg-accent text-primary hover:bg-accent/90"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>
@@ -150,14 +175,15 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-bold">Phone</h3>
-                      <p className="text-gray-600">+91 XXXXX XXXXX</p>
+                      <p className="text-gray-600">+91 9567 560 6156</p>
+                      <p className="text-gray-600">+91 9072 120 224</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
                     <Mail className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-bold">Email</h3>
-                      <p className="text-gray-600">contact@cocoflo.in</p>
+                      <p className="text-gray-600">info@cocoflo.in</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
@@ -173,13 +199,16 @@ export default function ContactPage() {
 
               <div className="bg-white p-6 rounded-2xl shadow-subtle">
                 <h3 className="text-xl font-bold mb-4">Map Location</h3>
-                <div className="relative h-[300px] bg-gray-100 rounded-lg flex items-center justify-center">
-                  {/* This would be replaced with an actual Google Map iframe */}
-                  <div className="text-center text-gray-500">
-                    <MapPin className="h-12 w-12 mx-auto mb-2 text-accent/50" />
-                    <p>Map Embed Placeholder</p>
-                    <p className="text-sm">Kozhikode, Kerala, India</p>
-                  </div>
+                <div className="rounded-lg overflow-hidden h-[300px]">
+                  <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3907.7853606286308!2d75.80278617594267!3d11.63863888856745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDM4JzE5LjEiTiA3NcKwNDgnMTkuMyJF!5e0!3m2!1sen!2sin!4v1744158200245!5m2!1sen!2sin" 
+                    width="100%" 
+                    height="100%" 
+                    style={{ border: 0 }} 
+                    allowFullScreen 
+                    loading="lazy" 
+                    referrerPolicy="no-referrer-when-downgrade">
+                  </iframe>
                 </div>
               </div>
 
@@ -189,7 +218,7 @@ export default function ContactPage() {
                   Want to discuss your project in detail? Schedule a free consultation with our experts.
                 </p>
                 <Button asChild className="bg-accent text-primary hover:bg-accent/90 w-full">
-                  <a href="tel:+91XXXXXXXXXXX">Call Now</a>
+                  <a href="tel:+9195675606156">Call Now</a>
                 </Button>
               </div>
             </div>
@@ -210,9 +239,9 @@ export default function ContactPage() {
               </p>
             </div>
             <div className="bg-white p-6 rounded-2xl shadow-subtle">
-              <h3 className="text-xl font-bold mb-3">Is coconut wood durable?</h3>
+              <h3 className="text-xl font-bold mb-3">Is coconut plank durable?</h3>
               <p className="text-gray-600">
-                Yes, coconut wood is highly durable and naturally resistant to termites. With proper care, it can last
+                Yes, coconut plank is highly durable and naturally resistant to termites. With proper care, it can last
                 for decades, making it an excellent sustainable alternative to traditional hardwoods.
               </p>
             </div>
@@ -236,4 +265,3 @@ export default function ContactPage() {
     </>
   )
 }
-

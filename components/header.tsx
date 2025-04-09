@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
@@ -37,8 +38,9 @@ export default function Header() {
       }`}
     >
       <div className="container flex items-center justify-between">
-        <Link href="/" className="flex items-center space-x-2">
-          <span className="font-playfair text-2xl font-bold">Cocoflo</span>
+        <Link href="/" className="flex items-center space-x-3">
+          <Image src="/logo.svg" alt="Cocoflo Logo" width={50} height={50} />
+          <span className="font-playfair text-3xl font-bold">Cocoflo</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -78,4 +80,3 @@ export default function Header() {
     </header>
   )
 }
-
