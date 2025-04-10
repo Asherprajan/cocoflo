@@ -1,6 +1,6 @@
 import Image from "next/image"
 import CTASection from "@/components/cta-section"
-import { Quote } from "lucide-react"
+import { Quote, User } from "lucide-react"
 
 export default function TestimonialsPage() {
   return (
@@ -27,8 +27,8 @@ export default function TestimonialsPage() {
                   terrace. Their attention to detail and professionalism was impressive."
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="relative h-16 w-16 rounded-full overflow-hidden">
-                    <Image src="/placeholder.svg?height=100&width=100" alt="Client" fill className="object-cover" />
+                  <div className="h-16 w-16 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                    <User className="h-10 w-10 text-gray-500" />
                   </div>
                   <div>
                     <h4 className="font-bold">John D.</h4>
@@ -45,8 +45,8 @@ export default function TestimonialsPage() {
                   it's eco-friendly! The team was professional and completed the work on schedule."
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="relative h-16 w-16 rounded-full overflow-hidden">
-                    <Image src="/placeholder.svg?height=100&width=100" alt="Client" fill className="object-cover" />
+                  <div className="h-16 w-16 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                    <User className="h-10 w-10 text-gray-500" />
                   </div>
                   <div>
                     <h4 className="font-bold">Neha S.</h4>
@@ -70,8 +70,8 @@ export default function TestimonialsPage() {
                 professional, and thorough. Highly recommended!"
               </p>
               <div className="flex items-center gap-3">
-                <div className="relative h-12 w-12 rounded-full overflow-hidden">
-                  <Image src="/placeholder.svg?height=100&width=100" alt="Client" fill className="object-cover" />
+                <div className="h-12 w-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                  <User className="h-7 w-7 text-gray-500" />
                 </div>
                 <div>
                   <h4 className="font-bold text-sm">Rajesh K.</h4>
@@ -85,8 +85,8 @@ export default function TestimonialsPage() {
                 impressive. Great service from start to finish."
               </p>
               <div className="flex items-center gap-3">
-                <div className="relative h-12 w-12 rounded-full overflow-hidden">
-                  <Image src="/placeholder.svg?height=100&width=100" alt="Client" fill className="object-cover" />
+                <div className="h-12 w-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                  <User className="h-7 w-7 text-gray-500" />
                 </div>
                 <div>
                   <h4 className="font-bold text-sm">Priya M.</h4>
@@ -100,8 +100,8 @@ export default function TestimonialsPage() {
                 quality or aesthetics. The wall paneling looks stunning!"
               </p>
               <div className="flex items-center gap-3">
-                <div className="relative h-12 w-12 rounded-full overflow-hidden">
-                  <Image src="/placeholder.svg?height=100&width=100" alt="Client" fill className="object-cover" />
+                <div className="h-12 w-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                  <User className="h-7 w-7 text-gray-500" />
                 </div>
                 <div>
                   <h4 className="font-bold text-sm">Arun T.</h4>
@@ -115,8 +115,8 @@ export default function TestimonialsPage() {
                 Their expertise and quality materials made all the difference."
               </p>
               <div className="flex items-center gap-3">
-                <div className="relative h-12 w-12 rounded-full overflow-hidden">
-                  <Image src="/placeholder.svg?height=100&width=100" alt="Client" fill className="object-cover" />
+                <div className="h-12 w-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                  <User className="h-7 w-7 text-gray-500" />
                 </div>
                 <div>
                   <h4 className="font-bold text-sm">Meera J.</h4>
@@ -130,8 +130,8 @@ export default function TestimonialsPage() {
                 craftsmanship is exceptional, and I love supporting sustainable practices."
               </p>
               <div className="flex items-center gap-3">
-                <div className="relative h-12 w-12 rounded-full overflow-hidden">
-                  <Image src="/placeholder.svg?height=100&width=100" alt="Client" fill className="object-cover" />
+                <div className="h-12 w-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                  <User className="h-7 w-7 text-gray-500" />
                 </div>
                 <div>
                   <h4 className="font-bold text-sm">Vikram S.</h4>
@@ -145,8 +145,8 @@ export default function TestimonialsPage() {
                 house within the promised timeframe and budget. Excellent service!"
               </p>
               <div className="flex items-center gap-3">
-                <div className="relative h-12 w-12 rounded-full overflow-hidden">
-                  <Image src="/placeholder.svg?height=100&width=100" alt="Client" fill className="object-cover" />
+                <div className="h-12 w-12 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                  <User className="h-7 w-7 text-gray-500" />
                 </div>
                 <div>
                   <h4 className="font-bold text-sm">Lakshmi R.</h4>
@@ -159,7 +159,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Client Showcase Gallery */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      {/* <section className="py-16 md:py-24 bg-gray-50">
         <div className="container">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">Before & After</h2>
           <div className="grid md:grid-cols-2 gap-8">
@@ -207,7 +207,7 @@ export default function TestimonialsPage() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA Section */}
       <CTASection
@@ -219,4 +219,3 @@ export default function TestimonialsPage() {
     </>
   )
 }
-

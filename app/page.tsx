@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import CTASection from "@/components/cta-section"
-import { Shield, Leaf, Users, Settings, ArrowRight } from "lucide-react"
+import { Shield, Leaf, Users, Settings, ArrowRight,User } from "lucide-react"
 
 export default function Home() {
   return (
@@ -234,7 +234,9 @@ export default function Home() {
             <div className="bg-white p-8 rounded-2xl shadow-subtle">
               <div className="flex items-center gap-4 mb-6">
                 <div className="relative h-16 w-16 rounded-full overflow-hidden">
-                  <Image src="/placeholder.svg?height=100&width=100" alt="Client" fill className="object-cover" />
+                  <div className="h-16 w-16 bg-gray-200 flex items-center justify-center">
+                    <User className="h-10 w-10 text-gray-500" />
+                  </div>
                 </div>
                 <div>
                   <h4 className="font-bold">John D.</h4>
@@ -249,7 +251,9 @@ export default function Home() {
             <div className="bg-white p-8 rounded-2xl shadow-subtle">
               <div className="flex items-center gap-4 mb-6">
                 <div className="relative h-16 w-16 rounded-full overflow-hidden">
-                  <Image src="/placeholder.svg?height=100&width=100" alt="Client" fill className="object-cover" />
+                  <div className="h-16 w-16 bg-gray-200 flex items-center justify-center">
+                    <User className="h-10 w-10 text-gray-500" />
+                  </div>
                 </div>
                 <div>
                   <h4 className="font-bold">Neha S.</h4>

@@ -168,7 +168,7 @@ export default function ContactPage() {
                     <MapPin className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-bold">Address</h3>
-                      <p className="text-gray-600">Cocoflo Headquarters, Kozhikode, Kerala, India</p>
+                      <p className="text-gray-600">353/K, Kunnel Complex, Mullankunnu, Kuttiyadi Kozhikode 673513</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">

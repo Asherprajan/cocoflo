@@ -9,9 +9,9 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Cocoflo</h3>
             <p className="text-secondary mb-4">Your trusted partner in waterproofing and eco-friendly coconut planks.</p>
-            <div className="flex items-center space-x-2 text-secondary">
-              <MapPin size={16} />
-              <span>Kozhikode, India</span>
+            <div className="flex items-start space-x-2 text-secondary">
+              <MapPin size={16} className="mt-1 flex-shrink-0" />
+              <span>353/K, Kunnel Complex, Mullankunnu Kuttiyadi Kozhikode 673513</span>
             </div>
           </div>
 
