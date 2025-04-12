@@ -175,7 +175,7 @@ export default function ContactPage() {
                     <Phone className="h-6 w-6 text-accent flex-shrink-0 mt-1" />
                     <div>
                       <h3 className="font-bold">Phone</h3>
-                      <p className="text-gray-600">+91 9567 560 6156</p>
+                      <p className="text-gray-600">+91 9567 560 616</p>
                       <p className="text-gray-600">+91 9072 120 224</p>
                     </div>
                   </div>
@@ -218,7 +218,7 @@ export default function ContactPage() {
                   Want to discuss your project in detail? Schedule a free consultation with our experts.
                 </p>
                 <Button asChild className="bg-accent text-primary hover:bg-accent/90 w-full">
-                  <a href="tel:+9195675606156">Call Now</a>
+                  <a href="tel:+919567560616">Call Now</a>
                 </Button>
               </div>
             </div>

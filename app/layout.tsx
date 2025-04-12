@@ -4,6 +4,7 @@ import { Playfair_Display, Plus_Jakarta_Sans } from "next/font/google"
 import "./globals.css"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
+import WhatsAppButton from "@/components/whatsapp-button"
 import { ThemeProvider } from "@/components/theme-provider"
 
 const playfair = Playfair_Display({
@@ -37,6 +38,7 @@ export default function RootLayout({
             <Header />
             <main className="flex-1">{children}</main>
             <Footer />
+            <WhatsAppButton />
           </div>
         </ThemeProvider>
       </body>

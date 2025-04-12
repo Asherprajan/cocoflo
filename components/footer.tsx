@@ -78,7 +78,7 @@ export default function Footer() {
               <li className="flex items-center space-x-2 text-secondary">
                 <Phone size={16} />
                 <div>
-                  <span>+91 9567 560 6156</span><br />
+                  <span>+91 9567 560 616</span><br />
                   <span>+91 9072 120 224</span>
                 </div>
               </li>

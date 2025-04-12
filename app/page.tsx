@@ -2,7 +2,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import CTASection from "@/components/cta-section"
-import { Shield, Leaf, Users, Settings, ArrowRight,User } from "lucide-react"
+import { Shield, Leaf, Users, Settings, ArrowRight, User } from "lucide-react"
 
 export default function Home() {
   return (
@@ -233,10 +233,8 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-2xl shadow-subtle">
               <div className="flex items-center gap-4 mb-6">
-                <div className="relative h-16 w-16 rounded-full overflow-hidden">
-                  <div className="h-16 w-16 bg-gray-200 flex items-center justify-center">
-                    <User className="h-10 w-10 text-gray-500" />
-                  </div>
+                <div className="h-16 w-16 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                  <User className="h-10 w-10 text-gray-500" />
                 </div>
                 <div>
                   <h4 className="font-bold">John D.</h4>
@@ -250,10 +248,8 @@ export default function Home() {
             </div>
             <div className="bg-white p-8 rounded-2xl shadow-subtle">
               <div className="flex items-center gap-4 mb-6">
-                <div className="relative h-16 w-16 rounded-full overflow-hidden">
-                  <div className="h-16 w-16 bg-gray-200 flex items-center justify-center">
-                    <User className="h-10 w-10 text-gray-500" />
-                  </div>
+                <div className="h-16 w-16 rounded-full overflow-hidden bg-gray-200 flex items-center justify-center">
+                  <User className="h-10 w-10 text-gray-500" />
                 </div>
                 <div>
                   <h4 className="font-bold">Neha S.</h4>
